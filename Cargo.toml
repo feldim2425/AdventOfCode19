@@ -1,0 +1,9 @@
+[package]
+name="AoC19"
+version="0.0.1"
+author="FeldiM"
+target="main.rs"
+
+[[bin]]
+name = "day1"
+path="day_01/main.rs"
