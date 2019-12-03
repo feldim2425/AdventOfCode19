@@ -19,4 +19,4 @@ You can also just build the binary with ``cargo build --bin dayXX``
 + Hax's [advent-of-code](https://github.com/Schlauer-Hax/advent-of-code) in Java
 + derNiklaas' [Advent-of-Code-2019](https://github.com/derNiklaas/Advent-of-Code-2019) in Java
 + networkException's [AdventOfCode](https://github.com/dejakobniklas/AdventOfCode) in Java
-+ derKaländer's [AdventOfCode](https://github.com/derkalaender/AdventOfCode) in Scala
++ derKaländer's [AdventOfCode](https://github.com/derkalaender/AdventOfCode) in Kotlin
