@@ -11,3 +11,11 @@ I choose to use [Rust](https://www.rust-lang.org). Not because it's my favorite 
 Just run ``cargo run --bin dayXX`` (Replacing XX with a number from 1-25).
 
 You can also just build the binary with ``cargo build --bin dayXX``
+
+## Other solutions
++ Trojaner's [AdventofCode](https://github.com/TrojanerHD/AdventofCode) in JavaScript / NodeJS
++ LeMoonStar's [AdventOfCode2019Solutions](https://github.com/LeMoonStar/AdventOfCode2019Solutions) in GoLang
++ DCDragonCoder's [AdventOfCode2019](https://github.com/DragonCoder01/AdventOfCode2019) in C++
++ Hax's [advent-of-code](https://github.com/Schlauer-Hax/advent-of-code) in Java
++ derNiklaas' [Advent-of-Code-2019](https://github.com/derNiklaas/Advent-of-Code-2019) in Java
++ dejakobniklas's [AdventOfCode](https://github.com/feldim2425/AdventOfCode19) in Java
