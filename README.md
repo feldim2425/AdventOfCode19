@@ -10,4 +10,4 @@ I choose to use [Rust](https://www.rust-lang.org). Not because it's my favorite 
 ## Testing out my code
 Just run ``cargo run --bin dayXX`` (Replacing XX with a number from 1-25).
 
-Yout can also just build the binary with ``cargo build --bin dayXX``
+You can also just build the binary with ``cargo build --bin dayXX``
