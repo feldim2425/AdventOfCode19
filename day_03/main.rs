@@ -39,7 +39,7 @@ fn read_puzzle_input() -> Result<Vec<Vec<String>>> {
     Ok(cables)
 }
 
-fn interpolate_cable(cable : & [cables::CableStep]) -> Vec<Line2D>{
+fn trace_cable(cable : & [cables::CableStep]) -> Vec<Line2D>{
     let mut current = Point2D { x:0, y:0 };
     let mut lines : Vec<Line2D> = Vec::new();
     for step in cable {
@@ -107,20 +107,13 @@ fn cross_lines(a: Line2D, b: Line2D) -> Option<Point2D> {
     }
 }
 
-fn calc_steps(path: &Vec<Line2D>, cur_line: Line2D, pt: Point2D) -> i32 {
-    let mut steps : i32 = 0;
-    for line in path {
-        steps += line.len;
-    }
-
+fn calc_steps(cur_line: Line2D, pt: Point2D) -> i32 {
     if cables::get_orientation(cur_line.dir) == cables::Orientaition::Horizontal {
-        steps += i32::abs(cur_line.start.x - pt.x)
+        return i32::abs(cur_line.start.x - pt.x)
     }
     else {
-        steps += i32::abs(cur_line.start.y - pt.y)
+        return i32::abs(cur_line.start.y - pt.y)
     }
-
-    return steps;
 }
 
 
@@ -132,12 +125,12 @@ fn solve_puzzle(cables : Vec<Vec<String>>) {
 
     let mut smallest_dist = std::i32::MAX;
     let mut smallest_path = std::i32::MAX;
-    let lines1 = interpolate_cable(&cables_parsed[0].to_vec());
-    let lines2 = interpolate_cable(&cables_parsed[1].to_vec());
+    let lines1 = trace_cable(&cables_parsed[0].to_vec());
+    let lines2 = trace_cable(&cables_parsed[1].to_vec());
 
-    let mut path1 : Vec<Line2D> = Vec::new();
+    let mut path1 : i32 = 0;
     for line_a in &lines1{
-        let mut path2 :  Vec<Line2D> = Vec::new();
+        let mut path2 : i32 = 0;
         for line_b in &lines2{
             let opt_pt : Option<Point2D> = cross_lines(line_a.clone(), line_b.clone());
             if opt_pt.is_some() {
@@ -149,16 +142,16 @@ fn solve_puzzle(cables : Vec<Vec<String>>) {
                         smallest_dist = dist;
                     }
 
-                    let steps = calc_steps(&path1, line_a.clone(), p2d) + calc_steps(&path2, line_b.clone(), p2d);
+                    let steps = calc_steps(line_a.clone(), p2d) + calc_steps(line_b.clone(), p2d) + path1 + path2;
                     if steps < smallest_path{
                         smallest_path = steps;
                     }
                 }
             }
 
-            path2.push(line_b.clone());
+            path2 += line_b.len;
         }
-        path1.push(line_a.clone());
+        path1 += line_a.len;
     }
 
     println!("1.) {}", smallest_dist);
