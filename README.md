@@ -1,6 +1,6 @@
 # Advent of Code < 2019 >
 
-[![Advent of Code](https://img.shields.io/badge/Day-03-blue?style=for-the-badge)](https://adventofcode.com/2019/) [![Rust](https://img.shields.io/badge/Language-Rust-orange?style=for-the-badge)](https://www.rust-lang.org)
+[![Advent of Code](https://img.shields.io/badge/Day-03-blue?style=for-the-badge)](https://adventofcode.com/2019/) [![Rust](https://img.shields.io/badge/Language-Rust-orange?style=for-the-badge&logo=rust)](https://www.rust-lang.org)
 
 Not much to say here just go to the [AdventOfCode 2019 Website](https://adventofcode.com/2019/) and check out the puzzles. There is a new one each day that you have to solve with programming and get points.
 
@@ -18,4 +18,5 @@ You can also just build the binary with ``cargo build --bin dayXX``
 + DCDragonCoder's [AdventOfCode2019](https://github.com/DragonCoder01/AdventOfCode2019) in C++
 + Hax's [advent-of-code](https://github.com/Schlauer-Hax/advent-of-code) in Java
 + derNiklaas' [Advent-of-Code-2019](https://github.com/derNiklaas/Advent-of-Code-2019) in Java
-+ dejakobniklas's [AdventOfCode](https://github.com/feldim2425/AdventOfCode19) in Java
++ networkException's [AdventOfCode](https://github.com/dejakobniklas/AdventOfCode) in Java
++ derKaländer's [AdventOfCode](https://github.com/derkalaender/AdventOfCode) in Scala
