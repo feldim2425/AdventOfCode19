@@ -7,3 +7,7 @@ target="main.rs"
 [[bin]]
 name = "day1"
 path="day_01/main.rs"
+
+[[bin]]
+name = "day2"
+path="day_02/main.rs"

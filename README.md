@@ -1,6 +1,6 @@
 # Advent of Code < 2019 >
 
-![https://adventofcode.com/2019/](https://img.shields.io/badge/Day-01-blue?style=for-the-badge)       ![https://www.rust-lang.org](https://img.shields.io/badge/Language-Rust-orange?style=for-the-badge)
+![https://adventofcode.com/2019/](https://img.shields.io/badge/Day-02-blue?style=for-the-badge)       ![https://www.rust-lang.org](https://img.shields.io/badge/Language-Rust-orange?style=for-the-badge)
 
 Not much to say here just go to the [AdventOfCode 2019 Website](https://adventofcode.com/2019/) and check out the puzzles. There is a new one each day that you have to solve with programming and get points.
 
