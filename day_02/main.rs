@@ -71,7 +71,7 @@ fn main(){
     let result_1 = run_program(mem_1);
     println!("1.) {}", result_1.memory[0]);
 
-    for noun in 0..99{
+    'outer: for noun in 0..99{
         for verb in 0..99{
             let mut mem_2 = mem.clone();
             mem_2[1] = noun;
@@ -79,7 +79,7 @@ fn main(){
             let result_2 = run_program(mem_2);
             if result_2.memory[0] == 19690720 {
                 println!("2.) {}", noun * 100 + verb);
-                break;
+                break 'outer;
             }
         }
     }
