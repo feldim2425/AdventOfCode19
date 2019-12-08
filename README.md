@@ -1,6 +1,6 @@
 # Advent of Code < 2019 >
 
-[![Advent of Code](https://img.shields.io/badge/Day-08-blue?style=for-the-badge)](https://adventofcode.com/2019/) [![Rust](https://img.shields.io/badge/Language-Rust-orange?style=for-the-badge&logo=rust)](https://www.rust-lang.org)
+[![Advent of Code](https://img.shields.io/badge/Day-08-blue?style=for-the-badge)](https://adventofcode.com/2019/) [![Rust](https://img.shields.io/badge/Language-Rust-orange?style=for-the-badge&logo=rust)](https://www.rust-lang.org) [![Join Torjaners Discord](https://img.shields.io/badge/Discord-Trojaner's%20Discord-blue?style=for-the-badge&logo=Discord)](https://discord.gg/qhHm8rM)
 
 Not much to say here just go to the [AdventOfCode 2019 Website](https://adventofcode.com/2019/) and check out the puzzles. There is a new one each day that you have to solve with programming and get points.
 
@@ -21,3 +21,4 @@ You can also just build the binary with ``cargo build --bin dayXX``
 + networkException's [AdventOfCode](https://github.com/dejakobniklas/AdventOfCode) in Java
 + derKaländer's [AdventOfCode](https://github.com/derkalaender/AdventOfCode) in Kotlin
 + Daan Breur's [AdventOfCode](https://github.com/daanbreur/AdventofCode2019) in Javascript / NodeJS
+
