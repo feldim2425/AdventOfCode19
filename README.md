@@ -20,3 +20,4 @@ You can also just build the binary with ``cargo build --bin dayXX``
 + derNiklaas' [Advent-of-Code-2019](https://github.com/derNiklaas/Advent-of-Code-2019) in Java
 + networkException's [AdventOfCode](https://github.com/dejakobniklas/AdventOfCode) in Java
 + derKaländer's [AdventOfCode](https://github.com/derkalaender/AdventOfCode) in Kotlin
++ Daan Breur's [AdventOfCode](https://github.com/daanbreur/AdventofCode2019) in Javascript / NodeJS
