@@ -9,8 +9,12 @@ I choose to use [Rust](https://www.rust-lang.org). Not because it's my favorite 
 
 ## Testing out my code
 Just run ``cargo run --bin dayXX`` (Replacing XX with a number from 1-25).
+You can also just build the binary with ``cargo build --bin dayXX``, the built binary is stored in ``target/debug/dayXX``
 
-You can also just build the binary with ``cargo build --bin dayXX``
+The debug binaries are a bit slow sometimes. You can add ``--release`` to build/run the optimized version. If you build a release binary it will be stored in ``target/release/dayXX``.
+
+On systems that support the bash syntax (Linux, MacOS, Linux System for Windows, git bash, ...) you can also run the ``run_all_days.sh`` shell script. The script will build all days (with the release target) and run them.
+
 
 ## Other solutions
 + Trojaner's [AdventofCode](https://github.com/TrojanerHD/AdventofCode) in JavaScript / NodeJS
