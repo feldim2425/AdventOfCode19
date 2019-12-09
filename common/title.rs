@@ -11,7 +11,7 @@ pub fn print_title(day: u8, title: &str){
     print!("{}", " Advent of Code ".green());
     print!("{}", "2019".bright_green().bold());
     print!("{}", " : ".red());
-    print!("{} {}", "Day".cyan(), format!("{}", day).bright_cyan().bold());
+    print!("{} {}", "Day".cyan(), format!("{:02}", day).bright_cyan().bold());
     print!("{}", " : ".red());
     print!("{} ", format!("{}", title).purple());
 
