@@ -1,3 +1,5 @@
+#[path = "../common/title.rs"]
+mod title;
 mod cables;
 
 #[macro_use]
@@ -159,6 +161,7 @@ fn solve_puzzle(cables : Vec<Vec<String>>) {
 }
 
 fn main(){
+    title::print_title(3, "Crossed Wires");
     match read_puzzle_input(){
         Ok(res) => solve_puzzle(res),
         Err(res) => println!("Error while reading puzzle input! {}", res),

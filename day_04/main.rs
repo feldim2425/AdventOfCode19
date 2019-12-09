@@ -1,3 +1,6 @@
+#[path = "../common/title.rs"]
+mod title;
+
 const INPUT_LOWER : u32 = 158126;
 const INPUT_UPPER : u32 = 624574;
 
@@ -102,6 +105,7 @@ fn solve_puzzle(){
 }*/
 
 fn main(){
+    title::print_title(4, "Secure Container");
     solve_puzzle();
     /*println!("{}", test_number(111111));
     println!("{}", test_number(223450));

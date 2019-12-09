@@ -1,3 +1,6 @@
+#[path = "../common/title.rs"]
+mod title;
+
 use std::fs;
 
 fn split_image(img_str: &str, size_x: u16, size_y: u16) -> Vec<Vec<Vec<char>>> {
@@ -93,6 +96,7 @@ fn print_img(img: &Vec<Vec<char>>){
 }
 
 fn main(){
+    title::print_title(8, "Space Image Format");
     let img_str = fs::read_to_string("day_08/image.txt").expect("File error!");
     let img = split_image(&img_str, 25, 6);
     println!("1.) {}", check_value(&img));

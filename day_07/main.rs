@@ -1,3 +1,5 @@
+#[path = "../common/title.rs"]
+mod title;
 mod intcomputer;
 
 use std::fs;
@@ -73,6 +75,7 @@ fn run_amp_chain_2(mem: &Vec<i32>, settings: &Vec<u8>) -> i32 {
 }
 
 fn main(){
+    title::print_title(7, "Amplification Circuit");
     let mem = split_string(fs::read_to_string("day_07/program.txt").expect("File error!"));
 
     let mut settings = vec![0,0,0,0,0];

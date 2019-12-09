@@ -1,3 +1,6 @@
+#[path = "../common/title.rs"]
+mod title;
+
 use std::vec::Vec;
 use std::string::String;
 
@@ -64,6 +67,7 @@ fn run_program(mut prog: Vec<i32>) -> ProgramResult{
 }
 
 fn main(){
+    title::print_title(2, "1202 Program Alarm ");
     let mem = split_string(String::from(PROGRAM));
     let mut mem_1 = mem.clone();
     mem_1[1] = 12;

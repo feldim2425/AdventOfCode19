@@ -1,3 +1,6 @@
+#[path = "../common/title.rs"]
+mod title;
+
 use std::io::BufReader;
 use std::io::prelude::*;
 use std::io::Result;
@@ -44,6 +47,7 @@ fn solve_puzzle(masses: Vec<i32>) {
 }
 
 fn main(){
+    title::print_title(1, "The Tyranny of the Rocket Equation");
     match read_puzzle_input(){
         Ok(res) => solve_puzzle(res),
         Err(res) => println!("Error while reading puzzle input! {}", res),

@@ -1,3 +1,6 @@
+#[path = "../common/title.rs"]
+mod title;
+
 use std::fs::File;
 use std::io::BufReader;
 use std::io::prelude::*;
@@ -142,6 +145,7 @@ fn solve_puzzle(res: HashMap<String, Body>){
 }
 
 fn main(){
+    title::print_title(6, "Universal Orbit Map");
     match read_puzzle_input(){
         Ok(res) => solve_puzzle(res),
         Err(res) => println!("Error while reading puzzle input! {}", res),

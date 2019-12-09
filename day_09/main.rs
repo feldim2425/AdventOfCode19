@@ -1,3 +1,5 @@
+#[path = "../common/title.rs"]
+mod title;
 mod intcomputer;
 
 use std::fs;
@@ -12,6 +14,7 @@ fn solve_puzzle(mem: &Vec<i64>) {
 }
 
 fn main(){
+    title::print_title(9, "Sensor Boost");
     let mem = split_string(fs::read_to_string("day_09/program.txt").expect("File error!"));
     solve_puzzle(&mem);
 }

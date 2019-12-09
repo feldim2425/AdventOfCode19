@@ -1,4 +1,8 @@
 #[macro_use] extern crate text_io;
+
+#[path = "../common/title.rs"]
+mod title;
+
 use std::vec::Vec;
 use std::io::{self, Write};
 use std::fs;
@@ -182,6 +186,7 @@ fn run_program(prog_in: &Vec<i32>) -> ProgramResult{
 }
 
 fn main(){
+    title::print_title(5, "Sunny with a Chance of Asteroids");
     let mem = split_string(fs::read_to_string("day_05/program.txt").expect("File error!"));
     println!("=> Part 1 ... [Enter \"1\" to continue]");
     let result_1 = run_program(&mem);
