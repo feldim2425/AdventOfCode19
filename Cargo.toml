@@ -39,8 +39,13 @@ path="day_08/main.rs"
 name = "day9"
 path="day_09/main.rs"
 
+[[bin]]
+name = "day10"
+path="day_10/main.rs"
+
 [dependencies]
 regex = "1"
 lazy_static = "1.4.0"
+ordered-float = "1.0.2"
 text_io = "0.1.7"
 colored = "1.9.0"
