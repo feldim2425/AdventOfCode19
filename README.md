@@ -1,6 +1,6 @@
 # Advent of Code < 2019 >
 
-[![Advent of Code](https://img.shields.io/badge/Day-10-blue?style=for-the-badge)](https://adventofcode.com/2019/) [![Rust](https://img.shields.io/badge/Language-Rust-orange?style=for-the-badge&logo=rust)](https://www.rust-lang.org) [![Join Trojaners Discord](https://img.shields.io/badge/Discord-Trojaner's%20Discord-blue?style=for-the-badge&logo=Discord)](https://discord.gg/qhHm8rM)
+[![Advent of Code](https://img.shields.io/badge/Day-11-blue?style=for-the-badge)](https://adventofcode.com/2019/) [![Rust](https://img.shields.io/badge/Language-Rust-orange?style=for-the-badge&logo=rust)](https://www.rust-lang.org) [![Join Trojaners Discord](https://img.shields.io/badge/Discord-Trojaner's%20Discord-blue?style=for-the-badge&logo=Discord)](https://discord.gg/qhHm8rM)
 
 Not much to say here just go to the [AdventOfCode 2019 Website](https://adventofcode.com/2019/) and check out the puzzles. There is a new one each day that you have to solve with programming and get points.
 
