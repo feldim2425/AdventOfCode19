@@ -189,7 +189,7 @@ fn solve_puzzle(mem: &Vec<i64>) {
     println!("1.) {}", img.len());
 
     let img2 = run_painter(&mem, Paint::WHITE);
-    let img_arr = map_to_img(&img2, Paint::WHITE);
+    let img_arr = map_to_img(&img2, Paint::BLACK);
     println!("2.) <image below; 8 capital letters>");
     print_img(&img_arr);
 }
