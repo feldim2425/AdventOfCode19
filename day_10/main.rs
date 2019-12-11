@@ -85,6 +85,15 @@ fn get_inline(station: &Position2D, astroids: &Vec<Position2D>) -> Vec<Position2
     return positions;
 }
 
+#[allow(dead_code)]
+fn print_debug(base: &Position2D, eliminated: &Vec<Position2D>){
+    println!("Base at {},{}",base.x, base.y);
+
+    for i in 0..eliminated.len() {
+        println!("{} -> {},{}",i, eliminated[i].x, eliminated[i].y);
+    }
+}
+
 fn relative_rotation(mut angle: f32, rotation: f32) -> f32{
     angle -= std::f32::consts::PI / 2f32;
     angle -= rotation;
