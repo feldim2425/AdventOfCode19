@@ -10,6 +10,7 @@ use std::fs::File;
 use std::io::BufReader;
 use std::io::prelude::*;
 use self::regex::Regex;
+use std::collections::HashSet;
 
 #[derive(Debug,Copy,Clone,PartialEq,Eq,Hash)]
 struct Vec3D {
@@ -123,7 +124,7 @@ fn step_position_1d(moons: &mut Vec<Moon1D>){
 
 /*
  * The function was originally implemented to iterate until it found a previous state in a hash set see
- * commit 611d289c146871046866c28e783bf2e111b69e0f.
+ * commit 611d289c146871046866c28e783bf2e111b69e0f the original is also implemented as find_steps_1d_old below (dead_code).
  * The accellerated version was inspired by: https://www.reddit.com/r/adventofcode/comments/e9nqpq/day_12_part_2_2x_faster_solution/
  * It makes the code approximately 2-times faster because the return path it exactly the inverse and begins when the velocity is 0.
  * Therefor it is enough to count the steps to the first 0 velocity (after start) and multiply that by 2.
@@ -144,6 +145,20 @@ fn find_steps_1d(moons: &mut Vec<Moon1D>) -> u64{
         }
     }
     return steps as u64 * 2;
+}
+
+/*
+ * This function was replaced by find_steps_1d since it is faster. But this is the original function based on 
+ * the solution before I read the reddit post.
+ */
+#[allow(dead_code)]
+fn find_steps_1d_old(moons: &mut Vec<Moon1D>) -> u64{
+    let mut states: HashSet<Vec<Moon1D>> = HashSet::new();
+    while states.get(moons).is_none() {
+        states.insert(moons.clone());
+        step_position_1d(moons);
+    }
+    return states.len() as u64;
 }
 
 
