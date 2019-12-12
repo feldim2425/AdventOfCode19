@@ -17,6 +17,15 @@ The debug binaries are a bit slow sometimes. You can add ``--release`` to build/
 
 On systems that support the bash syntax (Linux, MacOS, Linux System for Windows, git bash, ...) you can also run the ``run_all_days.sh`` shell script. The script will build all days (with the release target) and run them.
 
+## Disclaimer
+The solutions here are implemented me, they might not be the best solution possible.
+
+If I get stuck on a puzzle I will look in other solutions, but I will still implement them myself after I understood the concept.
+
+After I implemented my version I will also try and optimize it even with inspiration from other solution, but the same rule applies:
+I will implement it myself when I can understand, how and why that optimization works, otherwise I won't use it.
+
+I will also mark solutions / optimizations inspired by other ideas.
 
 ## Other solutions
 + Trojaner's [AdventofCode](https://github.com/TrojanerHD/AdventofCode) in JavaScript / NodeJS
