@@ -10,7 +10,6 @@ use std::fs::File;
 use std::io::BufReader;
 use std::io::prelude::*;
 use self::regex::Regex;
-use std::collections::HashSet;
 
 #[derive(Debug,Copy,Clone,PartialEq,Eq,Hash)]
 struct Vec3D {
@@ -122,13 +121,29 @@ fn step_position_1d(moons: &mut Vec<Moon1D>){
     }
 }
 
+/*
+ * The function was originally implemented to iterate trough a Hash list see
+ * commit 611d289c146871046866c28e783bf2e111b69e0f.
+ * The accellerated version was inspired by: https://www.reddit.com/r/adventofcode/comments/e9nqpq/day_12_part_2_2x_faster_solution/
+ * It makes the code approximatly 2-times faster because the return path it exactly the inverse and begins when the velocity is 0.
+ * Therefor it is enough to count the steps to the first 0 velocity (after start) and multiply that by 2.
+ * In this case this will be probably be more than 2x faster because the whole hashset seach can be removed.
+ */
 fn find_steps_1d(moons: &mut Vec<Moon1D>) -> u64{
-    let mut states: HashSet<Vec<Moon1D>> = HashSet::new();
-    while states.get(moons).is_none() {
-        states.insert(moons.clone());
+    let mut steps = 0;
+    let mut done = false;
+    while !done {
         step_position_1d(moons);
+        steps += 1;
+        done = true;
+        for moon in moons.iter(){
+            if moon.velocity != 0 {
+                done = false;
+                break;
+            }
+        }
     }
-    return states.len() as u64;
+    return steps as u64 * 2;
 }
 
 
