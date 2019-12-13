@@ -128,7 +128,7 @@ fn step_position_1d(moons: &mut Vec<Moon1D>){
  * The accellerated version was inspired by: https://www.reddit.com/r/adventofcode/comments/e9nqpq/day_12_part_2_2x_faster_solution/
  * It makes the code approximately 2-times faster because the return path it exactly the inverse and begins when the velocity is 0.
  * Therefor it is enough to count the steps to the first 0 velocity (after start) and multiply that by 2.
- * In this case this will be probably be more than 2x faster because the whole hashset seach can be removed.
+ * In this case this will probably be more than 2x faster because the whole hashset seach can be removed.
  */
 fn find_steps_1d(moons: &mut Vec<Moon1D>) -> u64{
     let mut steps = 0;
